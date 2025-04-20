@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Card Maker</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-blue-100 min-h-screen flex flex-col items-center p-6">
+
+  <h1 class="text-4xl font-bold text-purple-700 mb-8">Custom Card Maker 🎉</h1>
+
+  <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-2xl">
+    <form id="cardForm" class="space-y-4">
+
+      <div>
+        <label class="block text-lg font-semibold mb-1">Occasion:</label>
+        <select id="occasion" class="w-full p-2 rounded border">
+          <option>Birthday</option>
+          <option>Wedding</option>
+          <option>Anniversary</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-lg font-semibold mb-1">Recipient Name(s):</label>
+        <input type="text" id="names" class="w-full p-2 rounded border" placeholder="e.g., John & Jane">
+      </div>
+
+      <div>
+        <label class="block text-lg font-semibold mb-1">Date:</label>
+        <input type="date" id="date" class="w-full p-2 rounded border">
+      </div>
+
+      <div>
+        <label class="block text-lg font-semibold mb-1">Personal Message:</label>
+        <textarea id="message" class="w-full p-2 rounded border" rows="3" placeholder="Wishing you a lifetime of happiness!"></textarea>
+      </div>
+
+      <div>
+        <label class="block text-lg font-semibold mb-1">Upload Image (optional):</label>
+        <input type="file" id="imageUpload" accept="image/*" class="w-full">
+      </div>
+
+      <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full mt-4">
+        Create Card
+      </button>
+    </form>
+  </div>
+
+  <div id="cardPreview" class="bg-white mt-10 p-8 rounded-xl shadow-xl text-center hidden relative overflow-hidden w-full max-w-lg border-4 border-pink-300" style="background-image: url('https://www.transparenttextures.com/patterns/flowers.png'); background-size: cover; background-blend-mode: lighten;">
+    <img id="cardImage" src="" alt="" class="w-full h-48 object-cover rounded-t-lg hidden">
+    <h2 id="cardOccasion" class="text-2xl font-bold text-purple-700 mt-4"></h2>
+    <h3 id="cardNames" class="text-xl font-semibold mt-2"></h3>
+    <p id="cardDate" class="text-gray-600 mt-1"></p>
+    <p id="cardMessage" class="text-lg mt-4 text-gray-700"></p>
+    <div class="absolute top-2 left-2 text-2xl">🌸</div>
+<div class="absolute top-2 right-2 text-2xl">🌸</div>
+<div class="absolute bottom-2 left-2 text-2xl">🌸</div>
+<div class="absolute bottom-2 right-2 text-2xl">🌸</div>
+
+</div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
